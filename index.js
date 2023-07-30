@@ -167,9 +167,9 @@ app.post('/forgotcode', async (req, res) => {
   if(isCode){
     console.log(isCode)
       // Email verification options
-    const mailOptions = {
-      from: 'Edgewhiz Exchange',
-      to: email,
+      const mailOptions = {
+        from: 'Edgewhiz Exchange',
+        to: email,
       subject: 'Forgot Password',
       html: `
         <h3> Hello there, </h3>
