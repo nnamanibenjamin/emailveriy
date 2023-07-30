@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
-  secure: false,
+  secure: true,
   auth: {
     user: 'edgewhizexchange@gmail.com',
     pass: 'jpahixrgvokairzm',
@@ -93,7 +93,7 @@ function sendVerificationCode(email, code, res) {
     html: `
     <h3> Hello there, </h3>
     <h1 style="text-align: center;"> Verification code for Email Verification </h1>
-    <h2 style="text-align: center;"> Use this code to verify your account: <h1 style="text-align: center;"><${code}/h1></h2>
+    <h2 style="text-align: center;"> Use this code to verify your account: <h1 style="text-align: center;">${code}</h1></h2>
   `
   };
 
