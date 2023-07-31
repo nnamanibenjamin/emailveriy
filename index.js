@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
-  secure: true,
+  secure: false,
   auth: {
     user: 'edgewhizexchange@gmail.com',
     pass: 'jpahixrgvokairzm',
